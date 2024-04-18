@@ -1,7 +1,7 @@
 import * as React from 'react';
+import { extend, useThree, useFrame } from '@react-three/fiber';
 import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls';
 import * as THREE from 'three';
-import { extend, useFrame, useThree } from '@react-three/fiber'
 
 // extend THREE to include TrackballControls
 extend({ TrackballControls });

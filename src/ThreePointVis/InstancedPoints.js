@@ -49,8 +49,7 @@ const usePointColors = ({ data, selectedPoint,meshRef }) => {
     colorArray=dx;
 
     colorAttrib.current.needsUpdate = true;
-
-    console.log(meshRef)
+    console.log('meshRef',meshRef,'colorAttrib',colorAttrib);
 
   }, [data, selectedPoint, colorArray]);
 
@@ -128,16 +127,15 @@ const InstancedPoints = ({ data, layout, selectedPoint, onSelectPoint }) => {
       onClick={handleClick}
       onPointerDown={handlePointerDown}
     >
-      <cylinderBufferGeometry attach="geometry" args={[0.5, 0.5, 0.15, 32]}>
-        <instancedBufferAttribute
-          ref={colorAttrib}
-          attachObject={['attributes', 'color']}
-          args={[colorArray, 3]}
-        />
-      </cylinderBufferGeometry>
+      <cylinderGeometry attach="geometry" args={[0.5, 0.5, 0.15, 32]}>
+
+        <instancedBufferAttribute  ref={colorAttrib} attach="attributes-color" args={[colorArray, 3]} />
+
+      </cylinderGeometry>
       <meshStandardMaterial
         attach="material"
-        vertexColors={true}
+        color={"#fff"}
+        vertexColors
       />
     </instancedMesh>
   );
