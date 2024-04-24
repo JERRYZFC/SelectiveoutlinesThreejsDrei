@@ -8,22 +8,24 @@
   ],
   "main": "src/index.js",
   "dependencies": {
+    "@pmndrs/assets": "1.6.0",
     "@react-three/drei": "9.96.1",
     "@react-three/fiber": "8.15.14",
     "@react-three/postprocessing": "2.15.12",
+    "leva": "0.9.34",
     "nice-color-palettes": "3.0.0",
     "r3f-perf": "6.5.0",
-    "leva": "0.9.34",
-    "stats.js": "0.17.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-scripts": "5.0.1",
     "react-spring": "^9.7.3",
+    "stats.js": "0.17.0",
     "three": "0.160.1"
   },
   "scripts": {
-    "start": "set PORT=3008 &&  react-scripts start" ,
-    "build": "react-scripts build",
+    "startold": "set PORT=3008 && set GENERATE_SOURCEMAP=false  &&  react-scripts start",
+    "start": "set PORT=3008  &&  r3f-pack  start",
+    "buildold": "react-scripts build",
+    "build": "r3f-pack build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
@@ -32,5 +34,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "r3f-pack": "^2.8.0"
+  }
 }

@@ -126,10 +126,10 @@ return (
 
 
 
-          <PivotControls  scale={75} depthTest={false} fixed lineWidth={2}>
+          {/*<PivotControls  scale={75} depthTest={false} fixed lineWidth={2}>*/}
             {/*rotation={[0, -Math.PI / 2, 0]}  anchor={[1, -1, -1]} */}
           <SpatShow ref={splatRef} />
-          </PivotControls>
+          {/*</PivotControls>*/}
 
           <Segments NB={NB} setIsDragging={setIsDragging} floorPlane={floorPlane} />
           {/* <Triangles NB={NB} /> */}
