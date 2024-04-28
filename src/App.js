@@ -98,7 +98,6 @@ useEffect(() => {
   }, 200)
   if (cameraRef.current) {
 
-
   }
 
   return () => clearTimeout(tmo)

@@ -85,3 +85,17 @@ or if using PowerShell
 
 http-server.cmd .\build\
 Visit http://127.0.0.1:8080
+
+
+# react-three-rapier
+https://github.com/pmndrs/react-three-rapier
+
+https://codesandbox.io/p/sandbox/react-three-rapier-auto-colliders-b4coz1?file=%2Fsrc%2Findex.tsx%3A7%2C1
+
+react-three/rapier(或r3/rapier) 是围绕 Rapier ( https://rapier.rs/docs/user_guides/javascript ) 基于 WASM 的物理引擎的包装库，旨在无缝插入react-three/fiber管道中。
+
+该库的目标是提供一个快速的物理引擎，具有最小的摩擦和小型、直接的 API。
+
+https://github.com/pmndrs/react-three-rapier
+
+
